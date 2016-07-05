@@ -1,0 +1,15 @@
+#ver1
+#Generate Pythogorean triplets from 1 to 10
+
+import math
+
+for a in range(1,101, 1):
+    for b in range(1,101, 1):
+        s_a = a*a
+        s_b = b*b
+        s_c = a*a + b*b
+        #How do I deduce if s_c is a perfect square ?
+        #convert it to string
+        s =  str(math.sqrt(s_c))        
+        if s.endswith(".0"):
+            print a, b, s
