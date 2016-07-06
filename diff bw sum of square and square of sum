@@ -1,0 +1,31 @@
+  1 #ver2                                                                                                                                      
+  2 # Find difference between sum of squares of first 100 numbers and the square of
+  3 # their sum
+  4 
+  5 print "Python sript to show the difference of \
+  6     Sum of squares of first 100 numbers \
+  7     square of sum of first 100 numbers"
+  8 
+  9 
+ 10 print "\n*********Sum of Squares**********"
+ 11 sum = 0
+ 12 limit = int(raw_input("Plz enter the limit:"))
+ 13 
+ 14 for i in range(1,limit+1,1):
+ 15     print "Square of ",i, " = ",  (i*i)
+ 16     sum = sum + (i * i)
+ 17     print "sum of squares till",i," is ", sum
+ 18 print "Sum of Square numbers from 1 to ", limit," = ", sum
+ 19 sum
+ 20 print "\n*********Square of sums....********"
+ 21 
+ 22 sum = limit*(limit+1)/2
+ 23 print "Sum of numbers from 1 to ",limit," = ", sum
+ 24 
+ 25 
+ 26 square_of_sum = (limit*(limit+1)/2)**2
+ 27 print "Square of Sum from 1 to ", limit," = ",square_of_sum
+ 28 diff =  square_of_sum - sum
+ 29 print "difference of Square of Sum  and Sum of Square numbers = ", diff
+~                                                                                                                                                  
+~                                                                                               
