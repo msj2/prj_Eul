@@ -7,7 +7,27 @@
 # 
 # I had another thought. 10! or Factorial of 10 is one big no. divisible by all no's from 1 to 10.
 # But the smallest no. need not be a product of all no's from 1 to 10.
+# If that no. is divisible by 20, Then the no. is automatically divisible by 2, 10, 4 & 5. So, no need to modulo divide the no. by  these 4 no's....
 # If that no. is divisible by 18, Then the no. is automatically divisible by 2,3,6 & 9. So, no need to modulo divide the no. by  these 4 no's....
-# Same way for 16, 14, 12, 10, 8, 6 & 4
+# Same way, we need not modulo divide by any of these no's 16, 15, 14, 12, 10, 8, 6 & 4
+# So, modulo divide only by these no's  20, 19, 18, 17, 14, 13, 11, 7.
+# 
+# Behold, What if a no. is divisible by 7, but not 14.   So, giving up that proof.
+#
+# Another Point, ... 
 # I also found 2520 * 1440 = !(10) 
 # Strip away 1440 = 12 * 12 * 10 = (3 * 4) * (6* 2) * (2 * 5)  
+# But, I need to start from !(10), keep decrementing by 10 & check until 20.... 
+
+i = 20
+# I forgot how to write while-Until loop
+# Uncle Google gave https://www.daniweb.com/programming/software-development/threads/39804/do-while-loop-in-python
+
+while True:
+    
+    if ( (i % 20 == 0) || (i % 19 == 0) ):
+      break
+    else
+      i = i + 20
+      
+endo
