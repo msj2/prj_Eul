@@ -1,0 +1,13 @@
+#smallest no divisible by all no's bw 1 and 20
+# 2520 is given as eg. of no. divisible by all no's b/w 1 and 10.
+#
+# Start with coding for 1 to 10...
+# One guy had opined, because the no. has to be divisible by 10, The no. has to be a multiple of 10.
+# So, start with 0, increment by 10 & modulo divide it by all no's.....
+# 
+# I had another thought. 10! or Factorial of 10 is one big no. divisible by all no's from 1 to 10.
+# But the smallest no. need not be a product of all no's from 1 to 10.
+# If that no. is divisible by 18, Then the no. is automatically divisible by 2,3,6 & 9. So, no need to modulo divide the no. by  these 4 no's....
+# Same way for 16, 14, 12, 10, 8, 6 & 4
+# I also found 2520 * 1440 = !(10) 
+# Strip away 1440 = 12 * 12 * 10 = (3 * 4) * (6* 2) * (2 * 5)  
