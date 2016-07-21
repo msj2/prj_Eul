@@ -1,33 +1,74 @@
-#smallest no divisible by all no's bw 1 and 20
-# 2520 is given as eg. of no. divisible by all no's b/w 1 and 10.
-#
-# Start with coding for 1 to 10...
-# One guy had opined, because the no. has to be divisible by 10, The no. has to be a multiple of 10.
-# So, start with 0, increment by 10 & modulo divide it by all no's.....
-# 
-# I had another thought. 10! or Factorial of 10 is one big no. divisible by all no's from 1 to 10.
-# But the smallest no. need not be a product of all no's from 1 to 10.
-# If that no. is divisible by 20, Then the no. is automatically divisible by 2, 10, 4 & 5. So, no need to modulo divide the no. by  these 4 no's....
-# If that no. is divisible by 18, Then the no. is automatically divisible by 2,3,6 & 9. So, no need to modulo divide the no. by  these 4 no's....
-# Same way, we need not modulo divide by any of these no's 16, 15, 14, 12, 10, 8, 6 & 4
-# So, modulo divide only by these no's  20, 19, 18, 17, 14, 13, 11, 7.
-# 
-# Behold, What if a no. is divisible by 7, but not 14.   So, giving up that proof.
-#
-# Another Point, ... 
-# I also found 2520 * 1440 = !(10) 
-# Strip away 1440 = 12 * 12 * 10 = (3 * 4) * (6* 2) * (2 * 5)  
-# But, I need to start from !(10), keep decrementing by 10 & check until 20.... 
 
-i = 20
-# I forgot how to write while-Until loop
-# Uncle Google gave https://www.daniweb.com/programming/software-development/threads/39804/do-while-loop-in-python
+'''2520 is the smallest number that can be divided by 
+each of the numbers from 1 to 10
+#without any remainder.
 
+#What is the smallest positive number that is evenly divisible 
+#by all of the numbers from 1
+#to 20?'''
+
+from datetime import datetime
+lv_start = datetime.now()
+lv_i = 20
+lv_loop_count = 0
 while True:
-    
-    if ( (i % 20 == 0) || (i % 19 == 0) ):
-      break
-    else
-      i = i + 20
-      
-endo
+    if ((lv_i % 2 == 0) and
+        (lv_i % 3 == 0) and
+        (lv_i % 4 == 0) and
+        (lv_i % 5 == 0) and
+        (lv_i % 6 == 0) and
+        (lv_i % 7 == 0) and
+        (lv_i % 8 == 0) and
+        (lv_i % 9 == 0) and
+        (lv_i % 10 == 0) and
+        (lv_i % 11 == 0) and
+        (lv_i % 12 == 0) and
+        (lv_i % 13 == 0) and
+        (lv_i % 14 == 0) and
+        (lv_i % 15 == 0) and
+        (lv_i % 16 == 0) and
+        (lv_i % 17 == 0) and
+        (lv_i % 18 == 0) and
+        (lv_i % 19 == 0) and
+        (lv_i % 20 == 0)):
+        print lv_i, "is smallest +ve number that is evenly divisible by all"
+        print "numbers from 1 to 20 !!" 
+        break
+    lv_i = lv_i + 20 #As the no. must be multiple of 20"
+    lv_iloop_count = lv_loop_count + 1
+
+lv_end = datetime.now()
+
+lv_run_time = lv_end - lv_start
+print "run time = ", lv_run_time
+
+#pylint 
+#Your code has been rated at 2.00/10 (previous run: 0.00/10, +2.00) 
+
+# Checking runtime on i3 Core 1.8 GHz with 4GB RAM machine....
+#Press ENTER or type command to continue
+#232792560  is smallest positive number that is evenly divisible by all
+#numbers from 1 to 20 !!
+#run time =  0:00:05.311663
+
+## Changed the increment inside loop to 1, instead of 20....
+#Press ENTER or type command to continue
+#232792560  is smallest positive number that is evenly divisible by all
+#numbers from 1 to 20 !!
+#run time =  0:01:26.450374
+
+## Changed the increment inside loop to 1, instead of 20....
+#Press ENTER or type command to continue
+#232792560  is smallest positive number that is evenly divisible by all
+#numbers from 1 to 20 !!
+#run time =  0:01:17.896604
+
+## Changed the increment inside loop back to 20, instead of 1....
+
+#Press ENTER or type command to continue
+#232792560  is smallest positive number that is evenly divisible by all
+#numbers from 1 to 20 !!
+#run time =  0:00:06.421834
+
+#Press ENTER or type command to continue
+
