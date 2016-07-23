@@ -1,0 +1,74 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  untitled.py
+#  
+#  Copyright 2016 keshanna <keshanna@VATAPI>
+#  
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#  
+#  
+
+#ver1
+#	Find the Prime Factors of  600851475143
+#	Prime factors of 13195 are 5,7,13, 29
+#
+#	Loop thru odd numbers until square root of 600851475143
+#		check if the number is prime
+#		if yes, check modulo division leads to 0
+#		if no, continue
+
+import math
+#math.sqrt(x)
+
+def is_prime(prime):
+	n_max = int(math.sqrt(prime))
+	print "Module is_prime.......Checking if", prime, "is a prime no.... "
+	n_max += 1
+	for n in range(3, n_max, 2):
+		if ( prime % n == 0 ):
+	            return 0
+        	else:
+            		continue
+	return 1
+
+#	71 divides this & is a prim no. but not showing up in my prog....
+number = 600851475143
+#number = 13195
+n = 3
+
+#We aren't checking for prime here,So, go all the way till number.
+#nmax = int(math.sqrt(number))
+#print nmax
+
+    #for n in range(3, nmax, 2):
+#OverflowError: range() result has too many items
+#for n in range(3, nmax, 2):
+
+while (n < number):
+	#print n
+#	If this number modulo divides the given number		
+	if(number % n == 0 ):    
+	      print n, "divides ", number
+#	If this number is a prime number
+	      if (is_prime(n) == 1):
+		print n, " is a prime divisor of ", number
+	      else: 
+		print n, " is  a divisor, but not prime no.		"	
+	n = n + 1
+
+
+
