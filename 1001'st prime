@@ -19,3 +19,4 @@ while ( i < 1002):
 		print n, " is ",i,"'th prime no. "
 		i = i + 1
 	n = n + 2	
+#increment by 2....
