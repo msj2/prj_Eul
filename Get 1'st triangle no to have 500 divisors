@@ -1,0 +1,17 @@
+# n'th triangle no is sum of n natural no's.
+# 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ......
+# Get all factors of the triangle number....
+# For 28 these are the factors....1, 2, 4, 7, 14, 28, this is first no. that has 6 divisors
+
+# Get 1'st triangle no to have 500 divisors.
+
+
+def get_divisors_count(num):
+	print "called 	get_divisors_count"
+
+i =1
+cond = True
+while cond == True:
+    num = (i * (i+1))/2
+    print "Triangle no ",i, num
+    num_div = get_divisors_count(num)
