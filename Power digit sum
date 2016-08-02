@@ -1,0 +1,17 @@
+''''Power digit sum
+Problem 16
+#215 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+#What is the sum of the digits of the number 21000?
+'''''
+
+num = 2 ** 100
+print num
+print "Starting from rightmost no...Sum of digits in 2 to the power of 100 = "
+i = 0
+while i_num > 0:
+    i = i + (i_num % 10)
+    i_num = i_num / 10
+    print "Added", i
+print "Finally, = ", i
+#pyint score 8/10
