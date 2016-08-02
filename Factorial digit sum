@@ -1,0 +1,19 @@
+'''' Factorial digit sum
+Problem 20
+Get sum of digits in 100 Factorial
+'''
+
+import math
+
+n = math.factorial(100)
+print n
+
+i = 0
+while n > 0:
+    j = n % 10
+    print "Adding ", j
+    i = i + j
+    print "Sum now is ", i
+    n = n / 10
+print "Finally, = ", i
+#pylint Score 8.33/10.
