@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#first term in the Fibonacci sequence to contain 1000 digits
+
+a = 1;
+b = 2;
+c = 0;
+
+no_of_digits = 1
+while no_of_digits < 100:
+	c = a + b
+	#print "a = ",a, "b = ",b, "c = ",c
+	a = b
+	b = c	
+	# logof..abs.. of c/10. approach giving away
+	no_of_digits =len(str(c))
+print c
+
+# Internet not connecting on Unix, Couldn't install pylint on c:\python27\scripts.... using PIP.
+#So, no pylint score..
