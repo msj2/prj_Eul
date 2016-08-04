@@ -23,9 +23,19 @@
    ##Answer: 27a1779a8a8c323a307ac8a70bc4489d
    
    # begin with 10000, smallest 5 digit no.
-   i = 10000
-   sum = 0
-   while i < 100000:
-	   num = i
-	   sum = sum + (num % 10)
+list = []
+i = 10000
+sum = 0
+while i < 100000:
+	print "Trying with ", i
+	num = i
+	while i < 0:
+	   digit = num % 10
+	   sum = sum + (digit ** 5)
 	   num = num / 10
+	if  sum == i:
+		  print sum
+		  list.append(sum)
+	sum = 0
+	i = i + 1	
+	   			  
